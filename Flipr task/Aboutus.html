@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Sections</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Sen:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #232536;
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Sen', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .subscribe-btn {
+            padding: 10px 20px;
+            background-color: #FFBB32FF;
+            color: #342300FF;
+            font-size: 16px;
+            font-weight: 700;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .subscribe-btn:hover {
+            background-color: #BD7E00FF;
+        }
+
+        .about-us {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px 20px;
+            background-color: #fff;
+            position: relative;
+        }
+
+        .content {
+            max-width: 50%;
+            padding-right: 20px;
+        }
+
+        .content h4 {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .image {
+            width: 50%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            background-image: url('close-up-photography-of-man-wearing-sunglasses-1212984.svg');
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #ffcc4d;
+            padding: 20px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item h2 {
+            font-size: 36px;
+            margin: 0;
+            color: #fff;
+        }
+
+        .stat-item p {
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .mission-vision {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 20px;
+            background-color: #f7edf7;
+        }
+
+        .mission,
+        .vision {
+            max-width: 400px;
+        }
+
+        .mission h4,
+        .vision h4 {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .mission h2,
+        .vision h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .mission p,
+        .vision p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* New Content Section */
+        .content-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 30px;
+            background-color: #fff;
+            gap: 20px;
+        }
+
+        .content-section .text {
+            max-width: 50%;
+            padding-right: 20px;
+        }
+
+        .content-section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .content-section p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .content-section .image {
+            width: 50%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Reverse Layout for the second content section */
+        .content-section.reverse {
+            flex-direction: row-reverse;
+        }
+        /* Section 6 Container */
+.section6 {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Section Heading */
+.section-heading {
+    font-family: 'Sen', sans-serif;
+    font-size: 28px;
+    color: #333333;
+    margin-bottom: 40px;
+}
+
+/* Author Cards Container */
+.author-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Author Card */
+.author-card {
+    background-color: #f5f5f5;
+    width: 22%;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    
+}
+
+/* Hover Effect for Author Card */
+.author-card:hover {
+    background-color: #FBF6EA; /* Change color on hover */
+}
+
+/* Author Image */
+.author-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Author Name */
+.author-name {
+    font-family: 'Sen', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+/* Author Description */
+.author-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+/* Author Logos */
+.author-logos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Small Logos */
+.small-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+        /* Section 9 */
+        .section9 {
+            padding: 60px 20px;
+            background-color: #f7f7f7;
+            text-align: center;
+        }
+
+        .section9 h2 {
+            font-family: 'Sen', sans-serif;
+            font-weight: bold;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .section9 .description {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .section9 .join-now-btn {
+            padding: 10px 20px;
+            font-family: 'Sen', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000000;
+            background-color: #f9d857;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .section9 .join-now-btn:hover {
+            background-color: #555;
+        }
+
+        /* Footer */
+footer {
+    background-color: #232536; /* Dark background for footer */
+    color: #FFFFFF;
+    padding: 40px 20px;
+}
+
+/* Footer Navigation Bar */
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-nav .footer-company-name p {
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.footer-nav .footer-links a {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.footer-nav .footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Description Box */
+.footer-description-box {
+    background-color: #3b3940;
+    padding: 70px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.footer-description-box h2 {
+    font-family: 'Sen', sans-serif;
+    font-size: 26px;
+    margin: 0;
+    
+}
+
+.footer-description-box input[type="email"] {
+    border-radius: 4px;
+    padding: 10px;
+    
+    border: 1px solid #ced4da;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    flex: 1;
+}
+
+.footer-description-box .btn {
+    background-color: #e2db4d;
+    border: none;
+    color: #000000;
+    font-family: 'Sen', sans-serif;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.footer-description-box .btn:hover {
+    background-color: #e74b08;
+}
+
+/* Footer Contact and Logos */
+.footer-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info {
+    width: 30%;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    text-align: left;
+}
+
+.contact-details {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-logos {
+    display: flex;
+    gap: 20px;
+    
+   
+}
+
+.footer-logos .logo {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    background-color: rgb(255, 255, 255);
+}
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">{finsweet</div>
+        <nav>
+            <a href="Home.html">Home</a>
+            <a href="Aboutus.html">About Us</a>
+            <a href="Blog.html">Blog</a>
+            <a href="Contact.html">Contact Us</a>
+            <button class="subscribe-btn">Subscribe</button>
+        </nav>
+    </header>
+
+    <section class="about-us">
+        <div class="content">
+            <h4>About Us</h4>
+            <h1>We are a team of content writers who share their learnings</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus
+                ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+        </div>
+        <div class="image"></div>
+    </section>
+
+    <section class="stats">
+        <div class="stat-item">
+            <h2>10k+</h2>
+            <p>Articles</p>
+        </div>
+        <div class="stat-item">
+            <h2>50+</h2>
+            <p>Writers</p>
+        </div>
+        <div class="stat-item">
+            <h2>100k+</h2>
+            <p>Subscribers</p>
+        </div>
+    </section>
+
+    <section class="mission-vision">
+        <div class="mission">
+            <h4>Our Mission</h4>
+            <h2>To create engaging content</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus
+                ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+        </div>
+        <div class="vision">
+            <h4>Our Vision</h4>
+            <h2>To be the best content creators</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus
+                ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+        </div>
+    </section>
+
+    <!-- First Content Section -->
+    <section class="content-section">
+        <div class="text">
+            <h2>Transform Your Ideas into Reality</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a vehicula elit, non efficitur velit.
+                Curabitur fermentum, nunc et tempus varius, dui enim commodo nunc, sit amet tristique erat lectus id
+                mauris. Ut auctor cursus ex ut tincidunt.</p>
+        </div>
+        <div class="image"
+            style="background-image: url('close-up-photography-of-man-wearing-sunglasses-1212984.svg');"></div>
+    </section>
+
+    <!-- Second Content Section (Reversed) -->
+    <section class="content-section reverse">
+        <div class="text">
+            <h2>Unleash Your Creativity</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a vehicula elit, non efficitur velit.
+                Curabitur fermentum, nunc et tempus varius, dui enim commodo nunc, sit amet tristique erat lectus id
+                mauris. Ut auctor cursus ex ut tincidunt.</p>
+        </div>
+        <div class="image"
+            style="background-image: url('photo-of-people-doing-handshakes-3183197.svg');"></div>
+    </section>
+
+    <!-- Section 6: List of Authors -->
+<section class="section section6">
+    <h2 class="section-heading">List of Authors</h2>
+    
+    <div class="author-cards">
+        <!-- Author Card 1 -->
+        <div class="author-card">
+            <img src="Author1.svg" alt="Author Image" class="author-image"> <!-- Add author image URL -->
+            <h3 class="author-name">Author Name</h3> <!-- Author name here -->
+            <p class="author-description">[Description]</p> <!-- Short description -->
+            <div class="author-logos">
+                <img src="Negative.svg" alt="Logo 1" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (2).svg" alt="Logo 2" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (4).svg" alt="Logo 3" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (3).svg" alt="Logo 4" class="small-logo"> <!-- Add logo URL -->
+            </div>
+        </div>
+
+        
+        <div class="author-card">
+            <img src="Author2.svg" alt="Author Image" class="author-image"> <!-- Add author image URL -->
+            <h3 class="author-name">Author Name</h3> <!-- Author name here -->
+            <p class="author-description">[Description]</p> <!-- Short description -->
+            <div class="author-logos">
+                <img src="Negative.svg" alt="Logo 1" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (2).svg" alt="Logo 2" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (4).svg" alt="Logo 3" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (3).svg" alt="Logo 4" class="small-logo"> <!-- Add logo URL -->
+            </div>
+        </div>
+        <div class="author-card">
+            <img src="Author 3.svg" alt="Author Image" class="author-image"> <!-- Add author image URL -->
+            <h3 class="author-name">Author Name</h3> <!-- Author name here -->
+            <p class="author-description">[Description]</p> <!-- Short description -->
+            <div class="author-logos">
+                <img src="Negative.svg" alt="Logo 1" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (2).svg" alt="Logo 2" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (4).svg" alt="Logo 3" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (3).svg" alt="Logo 4" class="small-logo"> <!-- Add logo URL -->
+            </div>
+        </div>
+        <div class="author-card">
+            <img src="Author 4.svg" alt="Author Image" class="author-image"> <!-- Add author image URL -->
+            <h3 class="author-name">Author Name</h3> <!-- Author name here -->
+            <p class="author-description">[Description]</p> <!-- Short description -->
+            <div class="author-logos">
+                <img src="Negative.svg" alt="Logo 1" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (2).svg" alt="Logo 2" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (4).svg" alt="Logo 3" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (3).svg" alt="Logo 4" class="small-logo"> <!-- Add logo URL -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section class="section9">
+        <h2>Join Our Creative Community</h2>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent
+            libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+        <button class="join-now-btn">Join Now</button>
+    </section>
+
+    <footer>
+        <!-- Footer Navigation Bar -->
+        <div class="footer-nav">
+            <div class="footer-company-name">
+                <ps style="font-size: x-large;">{finsweet</p>
+            </div>
+            <div class="footer-links">
+                <a href="Home.html">Home</a>
+                <a href="Blog.html">Blog</a>
+                <a href="Aboutus.html">About Us</a>
+                <a href="Contact.html">Contact Us</a>
+                <a href="Privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    
+        <!-- Footer Content -->
+        <div class="footer-content">
+            <div class="footer-description-box">
+                <h2>Subscribe to Our Newsletter to get latest updates and news</h2>
+                <input type="email" placeholder="Enter your email">
+                <button type="button" class="btn btn-primary">Subscribe</button>
+            </div>
+    
+            <!-- Footer Contact and Logos -->
+            <div class="footer-contact">
+                <div class="contact-info">
+                    <p>Address: 123 Street Name, City, Country</p>
+                    <div class="contact-details">
+                       
+                        <p>   info@example.com</p>
+                        <p>   (123) 456-7890</p>
+                    </div>
+                </div>
+                <div class="footer-logos">
+                    <img src="Negative.svg" alt="Logo 1" class="logo">
+                    <img src="Negative (2).svg" alt="Logo 2" class="logo">
+                    <img src="Negative (3).svg" alt="Logo 3" class="logo">
+                    <img src="Negative (4).svg" alt="Logo 4" class="logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
+
+
+

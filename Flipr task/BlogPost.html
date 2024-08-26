@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <link rel="stylesheet" href="styles.css">
+
+<style>
+
+body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        header {
+            background-color: #232536;
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Sen', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .subscribe-btn {
+            padding: 10px 20px;
+            background-color: rgb(253, 253, 252);
+            color: #342300FF;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .subscribe-btn:hover {
+            background-color: #BD7E00FF;
+        }
+
+.post-header {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.author-info img {
+    border-radius: 50%;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.post-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.post-header .category {
+    color: #FF8C00;
+    font-weight: bold;
+}
+
+.post-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.post-content img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.post-content ul {
+    margin-top: 20px;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.related-posts {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.related-posts h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.post-card {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Section 9 */
+.section9 {
+    padding: 60px 20px;
+    background-color: #f7f7f7; /* Light background color */
+    text-align: center; /* Center-align all content */
+}
+
+.section9 h2 {
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.section9 .description {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.section9 .join-now-btn {
+    padding: 10px 20px;
+    font-family: 'Sen', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    background-color: #f9d857; /* Dark button color */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.section9 .join-now-btn:hover {
+    background-color: #555; /* Darker on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #232536; /* Dark background for footer */
+    color: #FFFFFF;
+    padding: 40px 20px;
+}
+
+/* Footer Navigation Bar */
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-nav .footer-company-name p {
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.footer-nav .footer-links a {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.footer-nav .footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Description Box */
+.footer-description-box {
+    background-color: #3b3940;
+    padding: 70px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.footer-description-box h2 {
+    font-family: 'Sen', sans-serif;
+    font-size: 26px;
+    margin: 0;
+    
+}
+
+.footer-description-box input[type="email"] {
+    border-radius: 4px;
+    padding: 10px;
+    
+    border: 1px solid #ced4da;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    flex: 1;
+}
+
+.footer-description-box .btn {
+    background-color: #e2db4d;
+    border: none;
+    color: #000000;
+    font-family: 'Sen', sans-serif;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.footer-description-box .btn:hover {
+    background-color: #e74b08;
+}
+
+/* Footer Contact and Logos */
+.footer-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info {
+    width: 30%;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    text-align: left;
+}
+
+.contact-details {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-logos {
+    display: flex;
+    gap: 20px;
+    
+   
+}
+
+.footer-logos .logo {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    background-color: rgb(255, 255, 255);
+}
+  
+</style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="logo">{finsweet</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact Us</a>
+            <button class="subscribe-btn">Subscribe</button>
+        </nav>
+    </header>
+
+    <!-- Blog Post Header -->
+    <section class="post-header">
+        <div class="author-info">
+            <img src="Image.svg" alt="Author Image"> <!-- Add author image -->
+            <div>
+                <h2>Andrew Jonson</h2>
+                <p>Posted on 27th January 2022</p>
+            </div>
+        </div>
+        <h1>Step-by-step guide to choosing great font pairs</h1>
+        <p class="category">Startup</p>
+    </section>
+
+    <!-- Blog Post Content -->
+    <section class="post-content">
+        <img src="BlogPost.svg" alt="Main Blog Image"> <!-- Add main blog image -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem.</p>
+        <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Non blandit massa enim nec scelerisque</li>
+            <li>Neque egestas congue quisque egestas</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </section>
+
+    <!-- Related Posts -->
+    <section class="related-posts">
+        <h2>What to read next</h2>
+        <div class="post-grid">
+            <div class="post-card">
+                <img src="img1.svg" alt="Related Post 1"> <!-- Add related post image -->
+                <h3>A UX Case Study Creating a Studious Environment for Students:</h3>
+                <p>By John Doe | Aug 23, 2021</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            <div class="post-card">
+                <img src="img2.svg" alt="Related Post 2"> <!-- Add related post image -->
+                <h3>A UX Case Study Creating a Studious Environment for Students:</h3>
+                <p>By John Doe | Aug 23, 2021</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            <div class="post-card">
+                <img src="img3.svg" alt="Related Post 3"> <!-- Add related post image -->
+                <h3>A UX Case Study Creating a Studious Environment for Students:</h3>
+                <p>By John Doe | Aug 23, 2021</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="section9">
+        <h2>Join our team to be a part of our story</h2>
+        <p class="description">We're looking for passionate individuals to join our team and help us grow. Together, we can achieve great things.</p>
+        <button class="join-now-btn">Join Now</button>
+    </section>
+    
+    
+    <footer>
+        <!-- Footer Navigation Bar -->
+        <div class="footer-nav">
+            <div class="footer-company-name">
+                <ps style="font-size: x-large;">{finsweet</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#blog">Blog</a>
+                <a href="#about-us">About Us</a>
+                <a href="#contact-us">Contact Us</a>
+                <a href="#privacy-policy">Privacy Policy</a>
+            </div>
+        </div>
+    
+        <!-- Footer Content -->
+        <div class="footer-content">
+            <div class="footer-description-box">
+                <h2>Subscribe to Our Newsletter to get latest updates and news</h2>
+                <input type="email" placeholder="Enter your email">
+                <button type="button" class="btn btn-primary">Subscribe</button>
+            </div>
+    
+            <!-- Footer Contact and Logos -->
+            <div class="footer-contact">
+                <div class="contact-info">
+                    <p>Address: 123 Street Name, City, Country</p>
+                    <div class="contact-details">
+                       
+                        <p>   info@example.com</p>
+                        <p>   (123) 456-7890</p>
+                    </div>
+                </div>
+                <div class="footer-logos">
+                    <img src="Negative.svg" alt="Logo 1" class="logo">
+                    <img src="Negative (2).svg" alt="Logo 2" class="logo">
+                    <img src="Negative (3).svg" alt="Logo 3" class="logo">
+                    <img src="Negative (4).svg" alt="Logo 4" class="logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

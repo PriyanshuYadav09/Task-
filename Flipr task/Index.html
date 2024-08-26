@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Sections</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Sen:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        header {
+            background-color: #232536;
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Sen', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .subscribe-btn {
+            padding: 10px 20px;
+            background-color: #FFBB32FF;
+            color: #342300FF;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .subscribe-btn:hover {
+            background-color: #BD7E00FF;
+        }
+
+        .section {
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        /* First Section with Image and Text */
+        .section1 {
+            background-image: url('man-in-black-suit-wearing-eye-glasses-sitting-on-gray-sofa-using-macbook-3772622.svg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: left;
+            color: white;
+            position: relative;
+            height: 600px; /* Adjust the height as needed */
+    display: flex;
+    align-items: center; /* Vertically center the content */
+        }
+        
+        .section1-content {
+            
+            
+    padding: 10px;
+    margin-left: 10px; /* Adjust margin to position content from the left */
+    max-width: 30%; /* Adjust the width of the content area */
+            
+        }
+ 
+         .section1 h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-family: 'Sen', sans-serif; /* Sen font for heading */
+            
+        } 
+
+        .section1 p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            font-family: 'Inter', sans-serif; /* Inter font for description */
+        }
+
+        .read-more-btn {
+            padding: 10px 20px;
+            background-color: #FFBB32FF;
+            color: #342300FF;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .read-more-btn:hover {
+            background-color: #BD7E00FF;
+        }
+
+       
+
+        
+  
+        /* Section 2 Container */
+.section2 .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Left Part: Featured Post */
+.left-part {
+    flex: 1;
+    max-width: 50%;
+    position: relative;
+}
+
+.featured-heading {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    z-index: 10;
+    
+    color: #060606;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-family: 'Sen', sans-serif;
+}
+
+.featured-image-container {
+    margin-top: 70px; /* Space for the heading */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.featured-image {
+    width: 100%;
+    height: 50%;
+}
+
+.featured-content {
+    margin-top: 20px;
+}
+
+.featured-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.read-more-btn {
+    padding: 10px 20px;
+    background-color: #FFBB32FF;
+    color: #342300FF;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.read-more-btn:hover {
+    background-color: #BD7E00FF;
+}
+
+/* Right Part: All Posts with List */
+.right-part {
+    flex: 1;
+    
+}
+
+.all-posts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -10px;
+    top: -50px;
+    
+}
+
+.all-posts-header h3 {
+    font-family: 'Sen', sans-serif;
+    font-size: 22px;
+    
+}
+
+.view-all-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #310A64FF;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.view-all-link:hover {
+    text-decoration: underline;
+}
+
+.post-cards-list {
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.post-card {
+    background-color: #FFFFFF;
+    /* border-radius: 8px; */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.post-card h4 {
+    font-family: 'Sen', sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.post-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #666666;
+}
+
+.post-card:hover {
+    background-color:#FBF6EA; /* Change to desired hover color */
+}
+
+/* Section 3 Container */
+.section3 {
+    padding: 40px 0px;
+    position: relative; /* For positioning the read more button */
+}
+
+/* Loading Bar */
+.loading-bar {
+    display: flex;
+    height: 20px;
+    width: 100%;
+    left: 300px;
+    margin-bottom: 0; 
+    position: relative;
+    background-color: transparent; 
+}
+
+.loading-bar .yellow-bar {
+    flex: 0 0 60%; 
+    background-color: #FFBB32FF; /* Yellow */
+}
+
+.loading-bar .purple-bar {
+    flex: 0 0 18.25%; 
+    background-color: #310A64FF; /* Purple */
+}
+
+/* Light Purple Box */
+.light-purple-box {
+    background-color: #F3E5F5; /* Light Purple */
+    padding: 50px;
+    height: 300px;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px; 
+    position: relative; 
+}
+
+/* About Us Section */
+.about-us {
+    flex: 1;
+    margin-right: 50px; /* Space between sections */
+    text-align: left;
+}
+
+.about-us h3 {
+    font-family: 'Sen', sans-serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.about-us p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #666666;
+}
+
+/* Our Mission Section */
+.our-mission {
+    flex: 1;
+    text-align: left; /* Right align the text */
+}
+
+.our-mission h3 {
+    font-family: 'Sen', sans-serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.our-mission p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #666666;
+}
+
+/* Read More Link */
+.read-more-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #310A64FF; /* Purple */
+    text-decoration: none;
+    margin-top: 20px;
+    display: block;
+    position: absolute; /* Positioning the link */
+    bottom: 70px; /* Distance from the bottom */
+    left: 50px; /* Distance from the left */
+}
+
+.read-more-link:hover {
+    text-decoration: underline;
+}
+
+/* Section 4 Container */
+.section4 {
+    padding: 50px 70px;
+}
+
+/* Centered Heading */
+.section-heading {
+    text-align: center;
+    font-family: 'Sen', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Cards Container */
+.cards-container {
+    display: flex;
+     
+    flex-wrap: wrap; /* Wrap cards on smaller screens */
+    gap: 50px; /* Slight gap between cards */
+}
+
+/* Card Style */
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    padding: 40px;
+    width: 220px; /* Width of each card */
+    position: relative; /* Positioning for the logo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover Effect */
+.card:hover {
+    background-color: #FFD050; /* Yellow on hover */
+}
+
+/* Card Logo - Top Left Corner */
+.card-logo {
+    position: absolute;
+    top: 15px; /* Adjust top spacing */
+    left: 15px; /* Adjust left spacing */
+    height: 50px; /* Placeholder height for logo */
+    width: 50px; /* Placeholder width for logo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    color: #999999;
+    background-color: #F0F0F0;
+    
+}
+
+/* Card Heading */
+.card-heading {
+    font-family: 'Sen', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    margin: 80px 0 10px; /* Adjusted margin to leave space for logo */
+}
+
+/* Card Description */
+.card-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    text-align: left;
+    color: #666666;
+}
+
+/* Section 5 Container */
+.section5 {
+    position: relative;
+    padding: 40px 20px;
+}
+
+/* Image Container */
+.image-container {
+    position: relative;
+    z-index: 1;
+    width: 60%; /* Adjust the width of the image */
+    height: auto;
+    margin-left: 80px;
+}
+
+.background-image {
+    width: 100%; /* Full width of the container */
+    height: auto;
+    display: block;
+}
+
+/* Text Box - Overlapping the Image */
+.text-box {
+    position: absolute;
+    top: 59%; 
+    left: 70%; 
+    transform: translate(-50%, -50%); 
+    width: 800px; 
+    height: 500px;
+    background-color: #FFFFFF;
+    padding: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    text-align: left; /* Ensure all content inside the box is left-aligned */
+    
+}
+
+/* Small Text */
+.small-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: #474747;
+    
+    margin-left: 40px;
+    
+}
+
+/* Main Heading */
+.main-heading {
+    font-family: 'Sen', sans-serif;
+    font-size: 30px;
+    color: #000000;
+    
+    margin-left: 40px;
+    margin-right: 100px;
+}
+
+/* Description Text */
+.description {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: #333333;
+    
+    margin-left: 40px;
+    margin-right: 100px;
+}
+
+/* Discover Button */
+.discover-button {
+    display: inline-block;
+    font-family: 'Sen', sans-serif;
+    font-size: 16px;
+    color: #000000;
+    background-color: #FFBB32;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Add some space above the button */
+    margin-left: 40px;
+}
+
+.discover-button:hover {
+    background-color: #BD7E00;
+}
+
+/* Section 6 Container */
+.section6 {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Section Heading */
+.section-heading {
+    font-family: 'Sen', sans-serif;
+    font-size: 28px;
+    color: #333333;
+    margin-bottom: 40px;
+}
+
+/* Author Cards Container */
+.author-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Author Card */
+.author-card {
+    background-color: #f5f5f5;
+    width: 22%;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    
+}
+
+/* Hover Effect for Author Card */
+.author-card:hover {
+    background-color: #FBF6EA; /* Change color on hover */
+}
+
+/* Author Image */
+.author-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Author Name */
+.author-name {
+    font-family: 'Sen', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+/* Author Description */
+.author-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+/* Author Logos */
+.author-logos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Small Logos */
+.small-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+
+/* Section 7: Featured In */
+.featured-in-section {
+    padding: 40px 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+}
+
+.featured-container {
+    text-align: left;
+    width: 100%;
+    padding: 70px;
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.we-are-text, .featured-text {
+    margin: 0;
+    padding: 0;
+}
+
+.we-are-text {
+    font-family: 'Sen', sans-serif;
+    font-size: 18px;
+}
+
+.featured-text {
+    font-family: 'Sen', sans-serif;
+    font-size: 24px;
+    margin-top: 5px; /* Space between the two texts */
+}
+
+.featured-logos {
+    display: flex;
+    gap: 80px;
+    justify-content: space-evenly;
+    
+}
+
+.featured-logos .logo {
+    width: 130px;
+    height: auto;
+}
+
+
+
+
+
+/* Section 8 */
+.section8 {
+    margin: 0 auto;
+    padding: 50px 0;
+    background-color: #FBF6EA;
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-box {
+    width: 80%; 
+    display: flex;
+    padding: 20px;
+    background-color: #FBF6EA;
+    position: relative;
+}
+
+.left-section {
+    width: 35%;
+    padding-right: 20px;
+}
+
+.left-section p:first-child {
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.left-section h2 {
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.left-section .description {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Divider Line */
+.divider {
+    width: 1px;
+    background-color: #ccc;
+    height: 100%;
+    position: absolute;
+    left: 35%;
+}
+
+.right-section {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+.testimonial-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.testimonial-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+}
+
+.author-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.author-details {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+.arrows {
+    display: flex;
+    gap: 10px;
+}
+
+.arrow {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fdfcfc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    background-color:#323340; /* Darker color on hover */
+}
+
+/* Section 9 */
+.section9 {
+    padding: 60px 20px;
+    background-color: #f7f7f7; /* Light background color */
+    text-align: center; /* Center-align all content */
+}
+
+.section9 h2 {
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.section9 .description {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.section9 .join-now-btn {
+    padding: 10px 20px;
+    font-family: 'Sen', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    background-color: #f9d857; /* Dark button color */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.section9 .join-now-btn:hover {
+    background-color: #555; /* Darker on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #232536; /* Dark background for footer */
+    color: #FFFFFF;
+    padding: 40px 20px;
+}
+
+/* Footer Navigation Bar */
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-nav .footer-company-name p {
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.footer-nav .footer-links a {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.footer-nav .footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Description Box */
+.footer-description-box {
+    background-color: #3b3940;
+    padding: 70px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.footer-description-box h2 {
+    font-family: 'Sen', sans-serif;
+    font-size: 26px;
+    margin: 0;
+    
+}
+
+.footer-description-box input[type="email"] {
+    border-radius: 4px;
+    padding: 10px;
+    
+    border: 1px solid #ced4da;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    flex: 1;
+}
+
+.footer-description-box .btn {
+    background-color: #e2db4d;
+    border: none;
+    color: #000000;
+    font-family: 'Sen', sans-serif;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.footer-description-box .btn:hover {
+    background-color: #e74b08;
+}
+
+/* Footer Contact and Logos */
+.footer-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info {
+    width: 30%;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    text-align: left;
+}
+
+.contact-details {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-logos {
+    display: flex;
+    gap: 20px;
+    
+   
+}
+
+.footer-logos .logo {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">{finsweet</div>
+        <nav>
+            <a href="Home.html">Home</a>
+            <a href="Aboutus.html">About Us</a>
+            <a href="Blog.html">Blog</a>
+            <a href="Contact.html">Contact Us</a>
+            <button class="subscribe-btn">Subscribe</button>
+        </nav>
+    </header>
+
+    <!-- Section 1 with Image and Text -->
+    <section class="section section1">
+        <div class="section1-content">
+            <p>Posted on Startup</p>
+            <h1>Your Heading Here</h1>
+            <p>This is a brief description of the section. You can write more details here to give visitors an overview of what this section is about.</p>
+            <a href="Blog.html" class="read-more-btn">Read More ></a>
+        </div>
+    </section>
+
+    <!-- Section 2: Featured Post and All Posts -->
+<section class="section section2">
+    <div class="container">
+        <!-- Left Part: Featured Post -->
+        <div class="left-part">
+            <h2 class="featured-heading">Featured Post</h2>
+            <div class="featured-image-container">
+                <img src="white-concrete-building-1838640.svg" alt="Featured Post Image" class="featured-image"> <!-- Replace with your image URL -->
+            </div>
+            <div class="featured-content">
+                <p>This is a brief description of the featured post. It provides an overview of the content and entices the reader to learn more.</p>
+                <a href="BlogPost.html" class="read-more-btn">Read More</a>
+            </div>
+        </div>
+        
+        <!-- Right Part: All Posts with List -->
+        <div class="right-part">
+            <div class="all-posts-header">
+                <h3>All posts</h3>
+                <a href="#view-all" class="view-all-link">View all</a>
+            </div>
+            <div class="post-cards-list">
+                <div class="post-card">
+                    <h4>Post 1</h4>
+                    <p>Heading of the First Post</p>
+                </div>
+                <div class="post-card">
+                    <h4>Post 2</h4>
+                    <p>Heading of the Second Post</p>
+                </div>
+                <div class="post-card">
+                    <h4>Post 3</h4>
+                    <p>Heading of the Third Post</p>
+                </div>
+                <div class="post-card">
+                    <h4>Post 4</h4>
+                    <p>Heading of the Fourth Post</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Section 3: Loading Bar and About Us -->
+<section class="section section3">
+    <!-- Loading Bar -->
+    <div class="loading-bar">
+        <div class="yellow-bar"></div>
+        <div class="purple-bar"></div>
+    </div>
+
+    <!-- Light Purple Box for About Us and Our Mission -->
+    <div class="light-purple-box">
+        <div class="about-us">
+            <h3>About Us</h3>
+            <p>This is a brief description of the About Us section. You can edit this text to include more details about your company, its values, and its history.</p>
+        </div>
+        <div class="our-mission">
+            <h3>Our Mission</h3>
+            <p>Our mission is to deliver the best services to our clients. We are dedicated to excellence and strive to exceed expectations in everything we do.</p>
+        </div>
+        <a href="#read-more" class="read-more-link">Read More</a>
+    </div>
+</section>
+
+
+
+<!-- Section 4: Choose a Category -->
+<section class="section section4">
+    <!-- Centered Heading -->
+    <h2 class="section-heading">Choose a Category</h2>
+
+    <!-- Cards Container -->
+    <div class="cards-container">
+        <div class="card">
+            <div  class="card-logo" ><img src="Icon-1.svg" alt=""></div>
+            <a href="Category.html"> <h3 class="card-heading">Business</h3></a>
+            <p class="card-description">Description for Business category goes here.</p>
+            
+        </div>
+        <div class="card">
+            <div class="card-logo"><img src="Icon (2).svg" alt=""></div>
+            <a href="Category.html"><h3 class="card-heading">Startup</h3></a>
+            <p class="card-description">Description for Startup category goes here.</p>
+            
+        </div>
+        <div class="card">
+            <div class="card-logo"><img src="icon.svg" alt=""></div>
+            <a href="Category.html"> <h3 class="card-heading">Economy</h3></a>
+            <p class="card-description">Description for Economy category goes here.</p>
+            
+        </div>
+        <div class="card">
+            <div class="card-logo"><img src="business-and-trade 1.svg" alt=""></div>
+            <a href="Category.html"> <h3 class="card-heading">Technology</h3></a>
+            <p class="card-description">Description for Technology category goes here.</p>
+            
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Section 5: Image with Overlapping Text Box -->
+<section class="section section5">
+    <!-- Left Aligned Image -->
+    <div class="image-container">
+        <img src="close-up-photography-of-man-wearing-sunglasses-1212984.svg" alt="Background Image" class="background-image"> <!-- Add your image URL here -->
+    </div>
+    
+    <!-- Right Aligned White Box -->
+    <div class="text-box">
+        <p class="small-text">Why We Started</p>
+        <h2 class="main-heading">It Started out as a simple idea and evolved into our passion</h2>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sit maiores atque vitae voluptates, magni nemo blanditiis perferendis nisi! Sequi optio error magni officiis incidunt.</p>
+        <a href="#" class="discover-button">Discover our story</a>
+    </div>
+</section>
+
+
+
+    <!-- Section 6: List of Authors -->
+<section class="section section6">
+    <h2 class="section-heading">List of Authors</h2>
+    
+    <div class="author-cards">
+        <!-- Author Card 1 -->
+        <div class="author-card">
+            <img src="Author1.svg" alt="Author Image" class="author-image"> <!-- Add author image URL -->
+           <a href="Author.html"><h3 class="author-name">Author Name</h3> <!-- Author name here --></a> 
+            <p class="author-description">[Description]</p> <!-- Short description -->
+            <div class="author-logos">
+                <img src="Negative.svg" alt="Logo 1" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (2).svg" alt="Logo 2" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (4).svg" alt="Logo 3" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (3).svg" alt="Logo 4" class="small-logo"> <!-- Add logo URL -->
+            </div>
+        </div>
+
+        
+        <div class="author-card">
+            <img src="Author2.svg" alt="Author Image" class="author-image"> <!-- Add author image URL -->
+            <a href="Author.html"><h3 class="author-name">Author Name</h3> <!-- Author name here --></a> 
+            <p class="author-description">[Description]</p> <!-- Short description -->
+            <div class="author-logos">
+                <img src="Negative.svg" alt="Logo 1" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (2).svg" alt="Logo 2" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (4).svg" alt="Logo 3" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (3).svg" alt="Logo 4" class="small-logo"> <!-- Add logo URL -->
+            </div>
+        </div>
+        <div class="author-card">
+            <img src="Author 3.svg" alt="Author Image" class="author-image"> <!-- Add author image URL -->
+            <a href="Author.html"> <h3 class="author-name">Author Name</h3> <!-- Author name here --></a> 
+            <p class="author-description">[Description]</p> <!-- Short description -->
+            <div class="author-logos">
+                <img src="Negative.svg" alt="Logo 1" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (2).svg" alt="Logo 2" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (4).svg" alt="Logo 3" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (3).svg" alt="Logo 4" class="small-logo"> <!-- Add logo URL -->
+            </div>
+        </div>
+        <div class="author-card">
+            <img src="Author 4.svg" alt="Author Image" class="author-image"> <!-- Add author image URL -->
+            <a href="Author.html"><h3 class="author-name">Author Name</h3> <!-- Author name here --></a> 
+            <p class="author-description">[Description]</p> <!-- Short description -->
+            <div class="author-logos">
+                <img src="Negative.svg" alt="Logo 1" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (2).svg" alt="Logo 2" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (4).svg" alt="Logo 3" class="small-logo"> <!-- Add logo URL -->
+                <img src="Negative (3).svg" alt="Logo 4" class="small-logo"> <!-- Add logo URL -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    
+<!-- Section 7: We are Featured In -->
+<section class="featured-in-section">
+    <div class="featured-container">
+        <div class="text-container">
+            <p class="we-are-text">We are</p>
+            <h2 class="featured-text">Featured in</h2>
+        </div>
+        <div class="featured-logos">
+            <img src="Logo 1.svg" alt="Logo 1" class="logo">
+            <img src="Logo 2.svg" alt="Logo 2" class="logo">
+            <img src="Logo 3.svg" alt="Logo 3" class="logo">
+            <img src="Logo 4.svg" alt="Logo 4" class="logo">
+            <img src="Logo 5.svg" alt="Logo 5" class="logo">
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section8">
+    <div class="testimonial-box">
+        <div class="left-section">
+            <p>Testimonial</p>
+            <h2>What people say about our blog</h2>
+            <p class="description">Your description here...</p>
+        </div>
+        <div class="divider"></div> <!-- Divider line between left and right parts -->
+        <div class="right-section">
+            <p class="testimonial-description">Your testimonial description here...</p>
+            <div class="testimonial-footer">
+                <div class="author-info">
+                    <img src="Image.svg" alt="Author" class="author-image">
+                    <div class="author-details">
+                        <p class="author-name">Author Name</p>
+                        <p class="author-address">City, Country</p>
+                    </div>
+                </div>
+                <div class="arrows">
+                    <div class="arrow left-arrow">&#8249;</div>
+                    <div class="arrow right-arrow">&#8250;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section9">
+    <h2>Join our team to be a part of our story</h2>
+    <p class="description">We're looking for passionate individuals to join our team and help us grow. Together, we can achieve great things.</p>
+    <button class="join-now-btn">Join Now</button>
+</section>
+
+
+<footer>
+    <!-- Footer Navigation Bar -->
+    <div class="footer-nav">
+        <div class="footer-company-name">
+            <ps style="font-size: x-large;">{finsweet</p>
+        </div>
+        <div class="footer-links">
+            <a href="Home.html">Home</a>
+            <a href="Blog.html">Blog</a>
+            <a href="Aboutus.html">About Us</a>
+            <a href="Contact.html">Contact Us</a>
+            <a href="Privacy.html">Privacy Policy</a>
+        </div>
+    </div>
+
+    <!-- Footer Content -->
+    <div class="footer-content">
+        <div class="footer-description-box">
+            <h2>Subscribe to Our Newsletter to get latest updates and news</h2>
+            <input type="email" placeholder="Enter your email">
+            <button type="button" class="btn btn-primary">Subscribe</button>
+        </div>
+
+        <!-- Footer Contact and Logos -->
+        <div class="footer-contact">
+            <div class="contact-info">
+                <p>Address: 123 Street Name, City, Country</p>
+                <div class="contact-details">
+                   
+                    <p>   info@example.com</p>
+                    <p>   (123) 456-7890</p>
+                </div>
+            </div>
+            <div class="footer-logos">
+                <img src="Negative.svg" alt="Logo 1" class="logo">
+                <img src="Negative (2).svg" alt="Logo 2" class="logo">
+                <img src="Negative (3).svg" alt="Logo 3" class="logo">
+                <img src="Negative (4).svg" alt="Logo 4" class="logo">
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>
+
+
+

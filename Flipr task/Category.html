@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #232536;
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Sen', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .subscribe-btn {
+            padding: 10px 20px;
+            background-color: rgb(253, 253, 252);
+            color: #342300FF;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .subscribe-btn:hover {
+            background-color: #BD7E00FF;
+        }
+
+        .category-intro {
+            background-color: #fcedfa;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .category-intro h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .category-intro p {
+            margin-bottom: 10px;
+            color: #777;
+        }
+
+        .breadcrumb {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: center;
+            padding: 50px 20px;
+            flex: 1;
+        }
+
+        .posts-list {
+            width: 60%;
+        }
+
+        .post {
+            display: flex;
+            margin-bottom: 40px;
+        }
+
+        .post img {
+            width: 200px;
+            height: 200px;
+            margin-right: 20px;
+        }
+
+        .post-content {
+            flex: 1;
+        }
+
+        .post-content .category {
+            color: #8e44ad;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .post-content h2 {
+            margin: 0;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar {
+            width: 30%;
+            margin-left: 30px;
+        }
+
+        .categories h3,
+        .tags h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .categories .category-card {
+            display: flex;
+            align-items: center;
+            background-color: #f7f5fc;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .categories .category-card img {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        .categories .category-card a {
+            text-decoration: none;
+            color: #131313;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .categories .category-card:hover {
+            background-color:#FFD050;
+        }
+
+        .categories .category-card:hover a {
+            color: #ffffff;
+        }
+
+        .tags .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tags .tag-list a {
+            background-color: #e2e1e1;
+            color: rgb(5, 5, 5);
+            padding: 5px 10px;
+            border-radius: 35px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        footer {
+            background-color: #232536;
+            color: #FFFFFF;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .footer-company-name p {
+            font-family: 'Sen', sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .footer-links a {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #FFFFFF;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-description-box {
+            background-color: #3b3940;
+            padding: 70px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .footer-description-box h2 {
+            font-family: 'Sen', sans-serif;
+            font-size: 26px;
+            margin: 0;
+        }
+
+        .footer-description-box input[type="email"] {
+            border-radius: 4px;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            flex: 1;
+        }
+
+        .footer-description-box .btn {
+            background-color: #e2db4d;
+            border: none;
+            color: #000000;
+            font-family: 'Sen', sans-serif;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .footer-description-box .btn:hover {
+            background-color: #e74b08;
+        }
+
+        .footer-contact {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info {
+            width: 30%;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .contact-details {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-logos {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-logos .logo {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+            background-color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="logo">{finsweet</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact Us</a>
+            <button class="subscribe-btn">Subscribe</button>
+        </nav>
+    </header>
+
+    <section class="category-intro">
+        <h1>Business</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+        <p class="breadcrumb">Blog > Business</p>
+    </section>
+
+    <section class="main-content">
+        <div class="posts-list">
+            <div class="post">
+                <img src="img1.svg" alt="Post Image"> <!-- Marked section for the image -->
+                <div class="post-content">
+                    <span class="category">Business</span>
+                    <h2>Top 6 free website mockup tools 2022</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec.</p>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="img2.svg" alt="Post Image"> <!-- Marked section for the image -->
+                <div class="post-content">
+                    <span class="category">Business</span>
+                    <h2>Step-by-step guide to choosing great font pairs</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec.</p>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="img3.svg" alt="Post Image"> <!-- Marked section for the image -->
+                <div class="post-content">
+                    <span class="category">Business</span>
+                    <h2>Ten free google fonts that you should use</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec.</p>
+                </div>
+            </div>
+        </div>
+
+        <aside class="sidebar">
+            <div class="categories">
+                <h3>Categories</h3>
+                <div class="category-card">
+                    <img src="Icon (2).svg" alt="Business Icon"> <!-- Marked section for the image -->
+                    <a href="#">Business</a>
+                </div>
+                <div class="category-card">
+                    <img src="icon.svg" alt="Startup Icon"> <!-- Marked section for the image -->
+                    <a href="#">Startup</a>
+                </div>
+                <div class="category-card">
+                    <img src="Icon-1.svg" alt="Economy Icon"> <!-- Marked section for the image -->
+                    <a href="#">Economy</a>
+                </div>
+                <div class="category-card">
+                    <img src="business-and-trade 1.svg" alt="Technology Icon"> <!-- Marked section for the image -->
+                    <a href="#">Technology</a>
+                </div>
+            </div>
+
+            <div class="tags">
+                <h3>Tags</h3>
+                <div class="tag-list">
+                    <a href="#">Consulting</a>
+                    <a href="#">Tips</a>
+                    <a href="#">Growth</a>
+                    <a href="#">SaaS</a>
+                    <a href="#">Startup</a>
+                </div>
+            </div>
+        </aside>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-nav">
+            <div class="footer-company-name">
+                <p>Finsweet</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+
+        <div class="footer-description-box">
+            <div>
+                <h2>Subscribe to our news letter to get latest updates and news</h2>
+            </div>
+            <div class="contact-details">
+                <input type="email" placeholder="Enter your email address">
+                <button class="btn">Subscribe</button>
+            </div>
+        </div>
+
+        <div class="footer-contact">
+            <div class="contact-info">
+                <p>Email: contact@website.com</p>
+                <p>Phone: +1234567890</p>
+                <p>Address: 123 Street, City, Country</p>
+            </div>
+            <div class="footer-logos">
+                <img src="Negative (2).svg" class="logo" alt="LinkedIn"> <!-- Marked section for the image -->
+                <img src="Negative (3).svg" class="logo" alt="Twitter"> <!-- Marked section for the image -->
+                <img src="Negative (4).svg" class="logo" alt="Instagram"> <!-- Marked section for the image -->
+                <img src="Negative.svg" class="logo" alt="Facebook"> <!-- Marked section for the image -->
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

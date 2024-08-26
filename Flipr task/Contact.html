@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Finsweet</title>
+    <style>
+
+        /* Header Styles */
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #232536;
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Sen', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .subscribe-btn {
+            padding: 10px 20px;
+            background-color: rgb(253, 253, 252);
+            color: #342300FF;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .subscribe-btn:hover {
+            background-color: #BD7E00FF;
+        }
+
+        /* Main Section */
+        .contact-section {
+            flex: 1;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .contact-section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .contact-section p {
+            margin-bottom: 10px;
+            color: #141414;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-details {
+            background-color: #510862;
+            color: white;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 40%;
+            padding: 30px;
+            margin-top: 30px;
+            margin-left: 430px;
+            
+        }
+
+        .contact-details div {
+            text-align: left;
+        }
+
+        .contact-details h2 {
+            margin: 0 0 10px;
+            font-size: 18px;
+        }
+
+        .contact-details p {
+            color: #f7f3f3;
+            margin: 0;
+        }
+
+        /* Form Section */
+        .contact-form {
+            margin: 50px auto;
+            max-width: 600px;
+        }
+
+        .contact-form input, .contact-form select, .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ced4da;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            padding: 15px;
+            background-color: #E2B93B;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .contact-form button:hover {
+            background-color: #d9a736;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #232536;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .footer-company-name p {
+            font-family: 'Sen', sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .footer-links a {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-description-box {
+            background-color: #3b3940;
+            padding: 30px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .footer-description-box h2 {
+            font-family: 'Sen', sans-serif;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .footer-description-box input[type="email"] {
+            border-radius: 4px;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .footer-description-box .btn {
+            background-color: #E2B93B;
+            border: none;
+            color: white;
+            font-family: 'Sen', sans-serif;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .footer-description-box .btn:hover {
+            background-color: #d9a736;
+        }
+
+        .footer-contact {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info {
+            width: 30%;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+        }
+
+        .footer-logos {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-logos .logo {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+            background-color: white; /* Placeholder */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">{finsweet</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#blog">Blog</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
+            <button class="subscribe-btn">Subscribe</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <section class="contact-section">
+        <h1>Let’s Start a Conversation</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+
+        <div class="contact-details">
+            <div>
+                <h2>Working Hours</h2>
+                <p>Monday To Friday</p>
+                <p>9:00 AM to 8:00 PM PST</p>
+                <p>Our Support Team is available 24/7</p>
+            </div>
+            <div>
+                <h2>Contact Us</h2>
+                <p>020 7993 2905</p>
+                <p>hello@finsweet.com</p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <select required>
+                <option value="" disabled selected>Query Related</option>
+                <option value="support">Support</option>
+                <option value="sales">Sales</option>
+                <option value="general">General</option>
+            </select>
+            <textarea placeholder="Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-nav">
+            <div class="footer-company-name">
+                <p>Finsweet</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#blog">Blog</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact Us</a>
+                <a href="#privacy">Privacy Policy</a>
+            </div>
+        </div>
+
+        <div class="footer-description-box">
+            <h2>Subscribe to our newsletter to get the latest updates and news</h2>
+            <div>
+                <input type="email" placeholder="Enter Your Email" required>
+                <button type="button" class="btn">Subscribe</button>
+            </div>
+        </div>
+
+        <div class="footer-contact">
+            <div class="contact-info">
+                <p>Finstreet 118 2561 Fintown</p>
+                <p>Hello@finsweet.com</p>
+                <p>020 7993 2905</p>
+            </div>
+            <div class="footer-logos">
+                <img src="linkedin.svg" class="logo" alt="LinkedIn"> <!-- Replace with actual image -->
+                <img src="twitter.svg" class="logo" alt="Twitter"> <!-- Replace with actual image -->
+                <img src="instagram.svg" class="logo" alt="Instagram"> <!-- Replace with actual image -->
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
